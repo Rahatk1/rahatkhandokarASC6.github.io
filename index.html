@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Final?</title>
+</head>
+<body>
+        <form id="color">
+            choose a color:<input type="text" placeholder="search a color" maxlength="10" id="boxtext">
+            <button>Enter</button>
+    
+        </form>
+    
+        <div>colorless</div>
+
+
+        <form id="form">
+
+            <select id="menu">
+                <option value="pika">random 1</option>
+                <option value="bulba">random 2</option>
+                <option value="char">random 3</option>
+                <!-- <option value="squir">squirtle</option> -->
+            </select>
+    
+            <button id="button">choose your Random Image!</button>
+    
+        </form>
+    
+    <div class="container">
+        
+        <div id="logo_div">
+                        <img id="logo" src="images/IMG-0622.jpg">
+        </div>
+        <h1 class="logo"></h1>
+  
+        <nav>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="#other">other</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li><a href="https://github.com/rahatkhandokarASC6?tab=repositories" target="_blank">GitHub</a></li>
+          </ul>
+        </nav>
+    </div>
+      <br>
+      <div class="name">
+          <h1>Rahat Khandokar</h1>
+      </div>
+
+<div class="about"> 
+<h3>ABOUT</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam non nisi est sit amet. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Urna duis convallis convallis tellus id interdum velit laoreet id. Pharetra sit amet aliquam id diam. Nibh nisl condimentum id venenatis. Nibh sit amet commodo nulla facilisi. Nibh ipsum consequat nisl vel. Consectetur adipiscing elit ut aliquam. Risus ultricies tristique nulla aliquet enim tortor at. Nec dui nunc mattis enim ut tellus elementum. Augue neque gravida in fermentum et sollicitudin </p>
+</div>
+<br>
+
+    <div id="skill">
+        <h3>SKILLS</h3>
+    </div>
+
+    <div class="skill">
+    <ul style="list-style-type:square;">
+        <li>Javascript</li>
+        <li>Computer building</li>
+        <li>P5.js</li>
+        <li>Web design</li>
+        <li>Web development</li>
+        <li>css</li>
+        <li>html</li>
+        <li>Augmented Reality</li>
+    </ul>
+    </div>
+    <div id="Contact">
+            <h3>Contact Information</h3>
+
+  </div>
+        <div class="contactinfo">
+
+            <p>Email:RahatKhandokar5@gmail.com</p>
+            <p>Phone Number:917.495.6045</p>
+            <p>Fax:1242353678</p>
+            <p>LinkedIn:Rahat Khandokar</p>
+        </div>
+  <div class="OTHER"> 
+                    <h3>OTHER</h3>
+                    
+
+</div>
+     
+
+    <div id="other">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nullam non nisi est sit amet. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Urna duis convallis convallis tellus id interdum velit laoreet id. Pharetra sit amet aliquam id diam. Nibh nisl condimentum id venenatis. Nibh sit amet commodo nulla facilisi. Nibh ipsum consequat nisl vel. Consectetur adipiscing elit ut aliquam. Risus ultricies tristique nulla aliquet enim tortor at. Nec dui nunc mattis enim ut tellus elementum. Augue neque gravida in fermentum et sollicitudin</p>
+    </div>
+         
+         
+    
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+         // get references
+        let menu = document.getElementById("menu");
+        let button = document.getElementById("button");
+        // let screenImage = document.querySelector("img");
+        // let pokemonInfoDiv = document.getElementById("pokemon_info");
+
+        // set up onclick for button
+        button.onclick = function(event) {
+            // prevent the page from reloading
+            event.preventDefault();
+
+            // capture userChoice
+            let userChoice = menu.value;
+            console.log(userChoice);
+
+            // show Pokemon picture based on userChoice
+            if (userChoice == "pika") {
+                window.open("https://picsum.photos/600/400/?random", "target_blank");
+                // change src of screenImage
+                // screenImage.src = "images/pikachu.png";
+
+                // change innerHTML of pokemonInfoDiv
+                // pokemonInfoDiv.innerHTML = "a yellow mouse";
+            }
+
+            else if (userChoice == "bulba") {
+                location.href = "https://picsum.photos/600/400/?random"
+                // screenImage.src = "images/bulbasaur.png";
+                // pokemonInfoDiv.innerHTML = "a green seed";
+            }
+
+            else if (userChoice == "char") {
+                location.href = "https://picsum.photos/600/400/?random"
+                // screenImage.src = "images/charmander.png";
+                // pokemonInfoDiv.innerHTML = "an orange chameleon";
+            }
+
+            else if (userChoice == "squir") {
+                location.href = "https://picsum.photos/600/400/?random"
+                // screenImage.src = "images/squirtle.png";
+                // pokemonInfoDiv = "a blue turtle";
+            }
+        }
+        
+        // get ref
+        let textbox= document.getElementById("boxtext");
+        console.log(textbox);
+        let clickButton=document.querySelector("button");
+        let screenDiv=document.querySelector("div");
+        let bodyRef=document.querySelector("body");
+
+        clickButton.onclick=function(event){
+            //prevent the page from reload
+            event.preventDefault(); 
+            //capture user input
+            let userinput=  textbox.value;
+            console.log(userinput)
+
+            // change back grnd coor based on user inpur
+            bodyRef.style.backgroundColor=userinput;
+           //show userinput on the screen   
+            screenDiv.innerHTML = userinput;
+
+        }
+        
+        
+        </script>
+</body>
+</html>
